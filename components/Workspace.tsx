@@ -75,14 +75,12 @@ const Workspace: React.FC<WorkspaceProps> = ({ onNavigate }) => {
       
       setDatasets(data);
       setIsOffline(false);
-      
-      const defaultId = data.find((d: any) => d.id.includes('healthy'))?.id || data[0]?.id;
-      if (defaultId) setSelectedDatasetId(defaultId);
+      // No auto-selection on load - user must explicitly select
     } catch (err) {
       console.log("GlassVault Backend unavailable (Offline Mode activated)");
       setIsOffline(true);
       setDatasets(MOCK_DATASETS);
-      setSelectedDatasetId(MOCK_DATASETS[0].id);
+      // No auto-selection on load - user must explicitly select
     }
   };
 
@@ -91,21 +89,15 @@ const Workspace: React.FC<WorkspaceProps> = ({ onNavigate }) => {
     fetchDatasets();
   }, []);
 
-  // Update selected dataset when scenario changes
-  useEffect(() => {
-    if (datasets.length === 0) return;
-    
-    let targetId = '';
-    if (scenario === 'normal') {
-      targetId = datasets.find(d => d.id.includes('healthy'))?.id || '';
-    } else {
-      targetId = datasets.find(d => d.id.includes('fail') || d.id.includes('distressed'))?.id || '';
-    }
-
-    if (targetId) setSelectedDatasetId(targetId);
-  }, [scenario, datasets]);
-
   // -- Handlers --
+
+  const handlePortfolioChange = (e: React.ChangeEvent<HTMLSelectElement>) => {
+    const newId = e.target.value;
+    setSelectedDatasetId(newId);
+    // Reset readiness checklist when portfolio changes
+    setChecklist({ completeness: 0, recency: 0, covenant: 0, valuation: 0 });
+    setIngestedData(null);
+  };
 
   const handleIngest = async () => {
     if (!selectedDatasetId) return;
@@ -283,12 +275,12 @@ const Workspace: React.FC<WorkspaceProps> = ({ onNavigate }) => {
                       <div className="relative">
                         <select 
                           value={selectedDatasetId}
-                          onChange={(e) => setSelectedDatasetId(e.target.value)}
+                          onChange={handlePortfolioChange}
                           disabled={datasets.length === 0}
                           className="w-full pl-4 pr-10 py-2.5 bg-gray-50 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 appearance-none text-gray-900 disabled:opacity-50"
                         >
                           <option value="" disabled>
-                            {datasets.length === 0 ? "Loading..." : "Select a portfolio..."}
+                            Select a portfolio…
                           </option>
                           {datasets.map(d => (
                             <option key={d.id} value={d.id}>
