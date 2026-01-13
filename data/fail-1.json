@@ -1,0 +1,27 @@
+{
+  "portfolio_id": "distressed-1",
+  "as_of": "2026-02-01",
+  "total_loans": 20,
+  "loans": [
+    {"loan_id":"L-0101","ref":"REF-0101","days_past_due":120,"valuation_band":"30-40","covenant_flags":["missed_payment", "LTV_breach"],"payment_history_summary":"missed 3 payments","redacted_borrower_id":"B-xxx-21"},
+    {"loan_id":"L-0102","ref":"REF-0102","days_past_due":0,"valuation_band":"95-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-22"},
+    {"loan_id":"L-0103","ref":"REF-0103","days_past_due":45,"valuation_band":"80-85","covenant_flags":["covenant_warning"],"payment_history_summary":"delayed","redacted_borrower_id":"B-xxx-23"},
+    {"loan_id":"L-0104","ref":"REF-0104","days_past_due":95,"valuation_band":"50-60","covenant_flags":["technical_default"],"payment_history_summary":"missed 2 payments","redacted_borrower_id":"B-xxx-24"},
+    {"loan_id":"L-0105","ref":"REF-0105","days_past_due":0,"valuation_band":"98-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-25"},
+    {"loan_id":"L-0106","ref":"REF-0106","days_past_due":0,"valuation_band":"90-95","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-26"},
+    {"loan_id":"L-0107","ref":"REF-0107","days_past_due":180,"valuation_band":"10-20","covenant_flags":["hard_default", "legal_action"],"payment_history_summary":"no contact","redacted_borrower_id":"B-xxx-27"},
+    {"loan_id":"L-0108","ref":"REF-0108","days_past_due":0,"valuation_band":"95-98","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-28"},
+    {"loan_id":"L-0109","ref":"REF-0109","days_past_due":0,"valuation_band":"100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-29"},
+    {"loan_id":"L-0110","ref":"REF-0110","days_past_due":30,"valuation_band":"85-90","covenant_flags":[],"payment_history_summary":"1 month late","redacted_borrower_id":"B-xxx-30"},
+    {"loan_id":"L-0111","ref":"REF-0111","days_past_due":0,"valuation_band":"95-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-31"},
+    {"loan_id":"L-0112","ref":"REF-0112","days_past_due":15,"valuation_band":"90-95","covenant_flags":[],"payment_history_summary":"admin delay","redacted_borrower_id":"B-xxx-32"},
+    {"loan_id":"L-0113","ref":"REF-0113","days_past_due":0,"valuation_band":"98-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-33"},
+    {"loan_id":"L-0114","ref":"REF-0114","days_past_due":60,"valuation_band":"70-80","covenant_flags":["watch_list"],"payment_history_summary":"irregular","redacted_borrower_id":"B-xxx-34"},
+    {"loan_id":"L-0115","ref":"REF-0115","days_past_due":0,"valuation_band":"99-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-35"},
+    {"loan_id":"L-0116","ref":"REF-0116","days_past_due":0,"valuation_band":"100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-36"},
+    {"loan_id":"L-0117","ref":"REF-0117","days_past_due":0,"valuation_band":"95-98","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-37"},
+    {"loan_id":"L-0118","ref":"REF-0118","days_past_due":92,"valuation_band":"55-65","covenant_flags":["covenant_breach"],"payment_history_summary":"missed 2 payments","redacted_borrower_id":"B-xxx-38"},
+    {"loan_id":"L-0119","ref":"REF-0119","days_past_due":0,"valuation_band":"98-100","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-39"},
+    {"loan_id":"L-0120","ref":"REF-0120","days_past_due":0,"valuation_band":"96-99","covenant_flags":[],"payment_history_summary":"on time","redacted_borrower_id":"B-xxx-40"}
+  ]
+}
